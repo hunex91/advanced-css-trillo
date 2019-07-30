@@ -11,6 +11,10 @@
   height: 7rem;
   background-color: var(--color-white);
   border-bottom: var(--color-grey-light-2);
+  font-size: var(--header-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .content {
