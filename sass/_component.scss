@@ -192,6 +192,7 @@
   display: flex;
   align-items: center;
   border-bottom: var(--horizontal-line);
+  background-color: var(--color-white);
 
   &__heading {
     font-size: 2.25rem;
@@ -424,5 +425,63 @@
     font-family: sans-serif;
     line-height: 1;
     z-index: 1;
+  }
+}
+
+// CTA
+
+.cta {
+  background-color: var(--color-white);
+  font-size: 1.6rem;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+
+  &__text {
+    margin-bottom: 3rem;
+  }
+}
+
+.btn-cta {
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: var(--color-white);
+  font-size: 1.5rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  & > * {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    transition: all .2s;
+  }
+
+  &__normal {
+    padding: 2rem 7.5rem;
+  }
+
+  &__hover {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 2rem 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+  }
+
+  &:hover &__normal {
+    transform: translateY(100%);
+  }
+
+  &:hover &__hover {
+    top: 0;
   }
 }
